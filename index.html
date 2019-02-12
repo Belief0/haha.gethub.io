@@ -1,68 +1,374 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <style>
-        section {
-            width: 450px;
-            height: 300px;
-            border: 1px solid #000;
-            margin: 100px auto;
-            background: url(images/3.jpg) no-repeat;
-            position: relative;
-            perspective: 1000px;  /*给父盒子添加透视效果*/
-        }
-        .door-l, .door-r {
-            position: absolute;
-            top: 0;
-            width: 50%;
-            height: 100%;
-            background-color: pink;
-            transition: all 1s; /*两个门都做过渡效果*/
-            background: url(images/bg.png);
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="崩坏3官方网站 - 在被崩坏侵蚀的世界中，勇敢的少女组成的女武神部队，为守护世界而展开了战斗">
+    <meta name="Keywords" content="崩坏3 官网 官方网站 bh3rd 预约 精英测试 米哈游 miHoYo 手游 动作 3d 某不科学的国产动作游戏 为世界上所有的美好而战">
+    <title>《崩坏3》官方网站 - 为世界上所有的美好而战</title>
+    <!-- 引入网站图标 -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tt.css">
 
-
-        }
-        .door-l {
-            left: 0;
-            border-right: 1px solid #000;
-            transform-origin: left;/* 左侧盒子按照左边翻转*/
-        }
-        .door-r {
-            right: 0;
-            left: 1px solid #000;
-            transform-origin: right;/*  右侧盒子按照右边翻转*/
-        }
-        .door-l::before, .door-r::before {  /*伪元素 就是插入一个元素标签*/
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 20px;
-            height: 20px;
-            border: 1px solid #000;
-            border-radius: 50%; /*圆角*/
-            transform：translateY(-50%); /*translate 如果是百分比， 就是走自己高度的一半*/
-        }
-        .door-l::before {
-            right: 5px;
-        }
-        .door-r::before {
-            left: 5px;
-        }
-        /*鼠标经过section 盒子 两个门盒子 翻转 rotateY*/
-        section:hover .door-l {
-            transform: rotateY(-130deg);  /*因为往左边翻转，所以是负值*/
-        }
-        section:hover .door-r {
-            transform: rotateY(130deg);
-        }
-    </style>
 </head>
-<body>
-<section>
-    <div class="door-l"></div>
-    <div class="door-r"></div>
-</section>
+
+<body class="w">
+<!-- 导航栏 -->
+<div class="nav">
+    <ul class="nav-wrap">
+        <li>
+            <a href="hx-index.html">
+                    <span class="nav-btn active">
+                        <text>首页</text>
+                    </span>
+            </a>
+        </li>
+        <li>
+            <a href="lr_index.html">
+                    <span class="nav-btn ">
+                        <text>作战资讯</text>
+                    </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="role.html">
+                    <span class="nav-btn ">
+                        <text>角色介绍</text>
+                    </span>
+            </a>
+        </li>
+        <li>
+            <a href="game.html">
+                    <span class="nav-btn ">
+                        <text>游戏特色</text>
+                    </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                    <span class="nav-btn ">
+                        <text>壁纸下载</text>
+                    </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                    <span class="nav-btn ">
+                        <text>周边商城</text>
+                    </span>
+            </a>
+        </li>
+        <li>
+            <a href="lr_login.html">
+                    <span class="nav-btn ">
+                        <text>我的账户</text>
+                    </span>
+            </a>
+        </li>
+    </ul>
+
+</div>
+<div id="tt-main">
+    <div class="tt-top">
+    </div>
+    <div class="tt-bt"></div>
+    <div class="tt-bb">
+        <div class="tt-pp"></div>
+        <div class="tt-cion">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/31.jpg" alt="">
+
+                            <div class="tt-word">黯蔷薇</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/30.jpg" alt="">
+
+                            <div class="tt-word">真红之剑</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/29.jpg" alt="">
+
+                            <div class="tt-word">原罪猎人</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/28.jpg" alt="">
+
+                            <div class="tt-word">极地战刃</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/27.jpg" alt="">
+
+                            <div class="tt-word">空之律者</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/26.jpg" alt="">
+
+                            <div class="tt-word">空之律者</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/25.jpg" alt="">
+
+                            <div class="tt-word">天命之战</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/24.jpg" alt="">
+
+                            <div class="tt-word">千年之羽</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/23.jpg" alt="">
+
+                            <div class="tt-word">月影逐龙</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/20.jpg" alt="">
+
+                            <div class="tt-word">赤染御魂</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/19.jpg" alt="">
+
+                            <div class="tt-word">银狼觉醒</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/15.jpg" alt="">
+
+                            <div class="tt-word">德丽莎，出击</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/14.jpg" alt="">
+
+                            <div class="tt-word">樱色轮回</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/13.jpg" alt="">
+
+                            <div class="tt-word">春节</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/10.jpg" alt="">
+
+                            <div class="tt-word">绯樱</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/09.jpg" alt="">
+
+                            <div class="tt-word">第四律者觉醒</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/06.jpg" alt="">
+
+                            <div class="tt-word">圣芙蕾雅学园</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/05.jpg" alt="">
+
+                            <div class="tt-word">天父启动</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/04.jpg" alt="">
+
+                            <div class="tt-word">银狼的献身</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/03.jpg" alt="">
+
+                            <div class="tt-word">公主与骑士</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/01.jpg" alt="">
+
+                            <div class="tt-word">背叛的银狼</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="tt-pic">
+                            <img src="images/05.jpg" alt="">
+
+                            <div class="tt-word">宣传绘</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div></div>
+
+<!-- 尾部 -->
+<div class="footer">
+    <div class="footer-content w">
+            <span>
+                <p>
+                    ▍健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。
+                </p>
+            </span>
+            <span>
+                <p>
+                    ▍用户协议：
+                    <a href="#" target="_blank">米哈游游戏使用许可及服务协议</a>&nbsp;&nbsp;
+                    <a href="#" target="_blank">米哈游用户个人信息及隐私保护政策</a>&nbsp;&nbsp;
+                    <a href="#" target="_blank">交易纠纷处理</a>&nbsp;&nbsp;
+                    <a href="#" target="_blank">家长监护工程</a>&nbsp;&nbsp;
+                    <a href="#" target="_blank">防沉迷系统</a>&nbsp;&nbsp;
+                    <a href="#" target="_blank">自律公约</a>
+                </p>
+            </span>
+            <span>
+                <p>▍适龄提示： 本游戏适合17岁（含）以上玩家娱乐</p>
+            </span>
+
+        <div style="height:10px"></div>
+            <span>
+                <p>
+                    <a href="#" target="_blank">沪ICP备14042301号-2</a> 沪网文〔2017〕8193-607号 文网游备字〔2016〕Ｍ-CSG 1244 号</p>
+            </span>
+            <span>
+                <p>
+                    <a href="#" target="_blank">
+                        <img style="vertical-align: bottom;" src="picture/gongan.png">
+                    </a> 沪公网安备31010402001116号</p>
+            </span>
+            <span width="100%">
+                <p>
+                    2014-2018 All Rights Reserved 米哈游科技（上海） 有限公司版权所有
+                    <span>
+                        <a href="#" style="text-decoration: none;    vertical-align: -webkit-baseline-middle;">
+                            <img src="picture/youxidzbq.png" style="width:18px;">
+                        </a>
+                    </span>
+                    <span>
+                        <a href="#" style="text-decoration: none;vertical-align: -webkit-baseline-middle;">
+                            <img src="picture/wenhuajingying.png" style="width:24px;">
+                        </a>
+                    </span>
+                    <span>
+                        <a href="#" style="text-decoration: none;vertical-align: -webkit-baseline-middle;">
+                            <img src="picture/lz2.png" style="width:20px;">
+                        </a>
+                    </span>
+                    <span>
+                        <a target="_blank" href="#">
+                            <img style="height: 20px;" src="picture/sm_124x47.png"></img>
+                        </a>
+                    </span>
+                </p>
+                <p style="float:left">地址：上海市徐汇区宜山路700号C4栋5层&nbsp;&nbsp; 前台电话：86-021-60331122</p>.
+                <br>
+                <p style="float:left">官方客服电话：021-34203305 （工作时间：每天10点 - 20点）</p>.
+                <p style="clear:both"></p>
+                <p style="float:left">投诉电话：021-34203135 （工作时间：每天10点 - 20点）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
+                    nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投诉邮箱：tousu@mihoyo.com
+                </p>
+                <p style="clear:both"></p>
+                <p style="float:right clear:both">
+                    <a href="#" target="_blank">联系方式</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#" target="_blank">加入我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#" target="_blank">免责条款</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#" target="_blank">法律声明</a>
+                </p>
+            </span>
+    </div>
+</div>
 </body>
+<script src="js/jquery-1.12.2.js"></script>
+<script src ="js/daohang.js"></script>
+<script>
+    $(function () {
+        window.onload=function(){
+            $(".nav ul>li:eq(4)").css({ "backgroundColor":"#00c3ff", "color":"black",})
+        }
+    })
+</script>
 </html>
